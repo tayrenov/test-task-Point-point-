@@ -327,6 +327,8 @@ body ._checkbox input[type=checkbox]:checked + label:after {
   text-align: center;
   content: "\2713";
   font-size: 22px;
+  background-color: #EF483E;
+  border: 1px solid #EF483E;
 }
 
 body ._desktop-hidden {

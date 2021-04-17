@@ -125,6 +125,9 @@ body {
             text-align: center;
             content: "\2713";
             font-size: 22px;
+            
+            background-color: $number_title;
+            border:1px solid $number_title;
         }
 
     }

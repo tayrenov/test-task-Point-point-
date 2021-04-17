@@ -1,0 +1,14 @@
+.main-info {
+    width:356px;
+    padding:24px;
+    box-sizing: border-box;
+    background:$main-block;
+    position: absolute;
+    left: 914px;
+    top: 128px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    p{
+        font-size: 15px;
+        line-height: 18px;
+    }
+}

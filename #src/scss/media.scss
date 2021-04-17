@@ -1,0 +1,122 @@
+@media (max-width:1360px) {
+    body {
+        ._container {
+            width:82.604%;
+            margin:40px auto 129px auto;
+        }
+    }
+    
+
+    .main-info {
+        margin-top: 40px;
+        width:100%;
+        max-width: 728px;
+        min-width:343px;
+        position:static;        ;
+        top:0;
+        left:0;
+    }  
+}
+
+@media (max-width:768px) { //iPad
+    body {
+        min-width: 375px;
+        ._container {
+            width:91.39%;
+            margin: 27px auto 137px auto;
+
+            ._desktop-hidden {
+                display: block;
+            }
+
+            .main__route, 
+            .main__transport,
+            .main__cargo,
+            .main__time {
+                min-width: 343px;
+            }
+
+            .main__transport {
+                .main__transport__form {
+                    .main__transport__form__block {
+                        max-width:166px;
+                        select {
+                            max-width:166px;
+                        }
+                    }
+                }
+            }
+
+            .main__cargo {
+
+                &__form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    &__row {
+                        max-width: 166px;
+
+                        input[type=number] {
+                            min-width: 166px;
+                            max-width: 166px;
+                        }
+                    }
+
+                    &__colums {
+                        max-width: 166px;
+                        
+                        &__block:first-child {
+                            display: none;
+                        }
+                        &__block:last-child {
+                            max-width: 166px;
+
+                            input[type="number"] {
+                                min-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main__time {
+                margin:43px 0 0 0;
+            }
+        }
+
+        ._container, form {
+            min-width: 343px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        form {
+            padding-left: 0;
+        }
+
+        input[type=text], input[type=number] {
+            min-width: 327px;
+        }
+
+        ._title-h2 {
+            h2 {
+                font-size: 20px;
+                margin:0 0 14px 8px;
+            }
+        }
+    }
+}
+
+@media (max-width:560px) {
+
+    body{
+        ._container {
+            margin: 27px auto 37px auto;
+
+        }
+    }
+      
+}

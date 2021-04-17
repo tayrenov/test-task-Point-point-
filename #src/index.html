@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('_head.html')
+</head>
+<body>
+    
+    <div class="main _container ">
+
+        <h1>FTL: Прямая машина</h1>
+
+        <section class="main__route">
+
+            <div class="_title-h2">
+                <div class="_title-h2__number">1</div>
+                <h2>Маршрут</h2>
+            </div>
+            
+
+            <form name="route" class="main__rout__form">
+                <span>Откуда</span>
+                <input type="text" name="wherefrom" id="wherefrom">
+                <span>Куда</span>
+                <input type="text" name="whereto" id="whereto">
+            </form>
+
+        </section>
+
+        <section class="main__transport">
+
+            <div class="_title-h2">
+                <div class="_title-h2__number">2</div>
+                <h2>Транспорт</h2>
+            </div>
+            
+
+            <form name="transport" class="main__transport__form">
+                <div class="main__transport__form__block">
+                    <span>Грузоподьемность</span>
+
+                    <select id="carrying" class="value-0 selected-col" size="1" name="carrying">
+                        <option style="display:none" selected value="0">Не выбрана</option>
+                        <option value="100">100кг</option>
+                        <option value="200">200кг</option>
+                        <option value="300">300кг</option>
+                        <option value="400">400кг</option>
+                    </select>
+
+                </div>
+
+                <div class="main__transport__form__block">
+                    <span>Способ погрузки</span>
+
+                    <select class="selected-col" size="1" name="carrying">
+                        <option value="back">Задняя</option>
+                        <option value="back">Задняя</option>
+                        <option value="back">Задняя</option>
+                        <option value="back">Задняя</option>
+                    </select>
+
+                </div>
+                
+
+            </form>
+
+        </section>
+
+        <section class="main__cargo ">
+
+            <div class="_title-h2">
+                <div class="_title-h2__number">3</div>
+                <h2>Груз</h2>
+            </div>
+
+            <form name="cargo" id="cargo"  class="main__cargo__form">
+                <div class="main__cargo__form__row">
+                    <span>Тип груза</span>
+
+                    <select id="" class="selected-row" size="1" name="carrying">
+                        <option selected value="0">Не выбрана</option>
+                        <option value="1">Тип груза 1</option>
+                        <option value="2">Тип груза 2</option>
+                        <option value="3">Тип груза 3</option>
+                        <option value="4">Тип груза 4</option>
+                    </select>
+                </div>
+
+                <div class="main__cargo__form__colums">
+                    <div class="main__cargo__form__colums__block">
+                        
+                        <span>Класс опасности</span>
+
+                        <select id="" class="selected-col" size="1" name="carrying">
+                            <option value="0">Не выбрана</option>
+                            <option selected value="100">Клас 5 -  Окисляющие вещества и органические перекиси </option>
+                            <option value="200">Клас 4 -  Окисляющие вещества и органические перекиси</option>
+                            <option value="300">Клас 3 -  Окисляющие вещества и органические перекиси</option>
+                            <option value="400">Клас 2 -  Окисляющие вещества и органические перекиси</option>
+                        </select>
+                    
+                    </div>
+
+                    <div class="main__cargo__form__colums__block">
+                        
+                        <span>Объявленная ценность, &#8381;</span>
+
+                        <input type="number" min="1" max="10000000" placeholder="&ge; 1">
+
+                    </div>
+
+                </div>
+
+                <div class="_checkbox">
+                    <input type="checkbox" id="temperature" name="temperature" value="1"> 
+                    <label for="temperature">Требуется температурный режим</label>
+                </div>
+
+            </form>
+
+            <section class="main__cargo__form _desktop-hidden">
+                <div class="main__cargo__form__row">
+                    <span>От, &#8451;</span>
+
+                    <input type="number" form="cargo" placeholder="-20" min="-23" max="+23">
+                </div>
+
+                <div class="main__cargo__form__row">
+                    <span>До, &#8451;</span>
+
+                    <input type="number" form="cargo" placeholder="+23" min="-23" max="+23">
+                </div>
+            </section>
+
+        </section>
+
+        <section class="main__time">
+
+            <div class="_title-h2">
+                <div class="_title-h2__number">4</div>
+                <h2>Время</h2>
+            </div>
+            
+
+            <form name="time" class="main__time__form">
+
+                <div class="main__time__form__subtitle">
+                    <span>Когда прибыть на точку</span>
+                    <span>700км в день</span>
+                </div>
+
+                <div class="main__time__form__radio">
+                    <div>
+                        <input type="checkbox" id="check1" name="check1" value="1">
+                        <label for="check1">Адрес не указан</label>
+                    </div>
+                    
+                    <div class="_button">Не выбрано</div>
+                </div>
+
+                <div class="main__time__form__radio">
+                    <div>
+                        <input type="checkbox" id="check2" name="check2" value="1">
+                        <label for="check2">Адрес не указан</label>
+                    </div>
+                    
+                    <div class="_button">Не выбрано</div>
+                </div>
+                
+                <div class="main__time__form__textarea">
+                    <span>Комментарий к заказу</span>
+
+                    <textarea  placeholder = "Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                </div>
+                
+            </form>
+
+        </section>
+        @@include('_main-info.html')
+    </div>
+
+    
+
+    <script src="js/script.js"></script>
+</body> 

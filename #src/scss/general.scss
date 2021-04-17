@@ -1,0 +1,136 @@
+
+
+/********STYLE********/
+
+body {
+    background: $body-background;
+    color:$text;
+    font-family: "Helvetica Neue", sans-serif;
+
+    ._container {
+        width:100%;
+        margin:40px 170px 129px 170px;
+    }
+
+    h1, h2 {
+        font-weight: 700;
+    }
+
+    h1 {
+        font-size: 56px;
+        line-height: 68.38px;
+        margin: 0 0 23px 0;
+    }
+
+    span {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    input, select {
+        height:44px;
+        font-size: 13px;
+        border:none;
+        padding: 14px;
+        box-sizing: border-box;
+    }
+
+    input[type="text"], input[type="number"]{
+
+        -moz-appearance:textfield;
+    }
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    form {
+        padding-left: 2px;
+        padding-top:6px;
+
+        select {
+            font-size: 15px;
+            padding:0 35px 0 11px;
+            color:#000;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance:none;
+            
+            option {
+                color:#000;
+            }
+            
+        }
+
+        .selected-col {
+            background:url("../img/list_button.png") 148px / 8px no-repeat #fff;
+        }
+        .selected-row {
+            background:url("../img/list_button.png") 332px / 8px no-repeat #fff;
+        }
+
+        .value-0 {
+            color:#CFCFCF;
+        }
+        
+    }    
+
+    ._title-h2 {
+        display: flex;
+        padding:0 0 0 2px;
+        &__number {
+            @include flex-content(center, center);
+            width:24px;
+            height:24px;
+            background:$number_title;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 24px;
+            @include flex-content(space-between, center);
+            margin:0 0 16px 8px;
+        }
+        
+    }
+
+    ._checkbox {
+        display: flex;
+        align-items: center;
+
+        input[type=checkbox] {
+            display:none;
+        }
+        label {
+            cursor:pointer;
+            position: relative;
+            padding-left: 36px;
+            padding-top: 3px;
+            font-size: 13px;
+        }
+        label:after {
+            content:'';
+            display:block;
+            height:21px;
+            width:21px;
+            border:1px solid #fff;
+            position:relative;
+            bottom:19px;
+            left:-35px;
+        }
+        input[type=checkbox]:checked + label:after {
+            text-align: center;
+            content: "\2713";
+            font-size: 22px;
+        }
+
+    }
+
+    ._desktop-hidden {
+        display: none;
+    }
+    
+}

@@ -1,25 +1,34 @@
 'use stritch';
 
 document.addEventListener('DOMContentLoaded', () => {   
-
-    const carring = document.querySelector('#carrying');
-
-
+/*получаем объекты для обработки элементов при загрузке страницы*/
+    const carrying = document.querySelector('#carrying'),
+          cargoType= document.querySelector('#cargoType');
+ 
+/*Проверка введённого значения и изменение стиля*/          
     function checkListStyle(obj) {
-        const value = obj.value;
 
-        if (obj.value=='0') {
-            obj.classList.add("value-0");
+        const object = document.querySelector(obj);
+        const value = object.value;
+
+        if (object.value=='0') {
+            object.classList.add("value-0");
         } else {
-            obj.classList.remove("value-0");
+            object.classList.remove("value-0");
         }
     }
-
-    carring.addEventListener('input', function(e) {
-        checkListStyle(carring);
+/**Клик на "Грузоподъёмность*/
+    carrying.addEventListener('input', function(e) {
+        checkListStyle('#carrying');
     });
-
-    checkListStyle(carring);
+/**Клик на "Тип груза*/
+    cargoType.addEventListener('input', function(e) {
+        checkListStyle('#cargoType');
+    });
+    
+/**Гасим элементы при загрузке страницы*/
+    checkListStyle('#carrying');
+    checkListStyle('#cargoType');
 });
 
     
